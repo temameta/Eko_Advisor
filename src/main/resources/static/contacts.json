@@ -1,0 +1,24 @@
+{
+  "creators": [
+    {
+      "id": 1,
+      "abbr": "artem",
+      "first_name": "Артём",
+      "last_name": "Сезёмов",
+      "patronymic": "Александрович",
+      "phone_number": "+7(917)547-74-84",
+      "email": "sezemov2@gmail.com",
+      "img": ""
+    },
+    {
+      "id": 2,
+      "abbr": "sergey",
+      "first_name": "Сергей",
+      "last_name": "Ушаков",
+      "patronymic": "Русланович",
+      "phone_number": "",
+      "email": "",
+      "img": ""
+    }
+  ]
+}
