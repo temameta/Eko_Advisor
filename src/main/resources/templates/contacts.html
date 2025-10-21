@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Contacts</title>
+    <link rel="stylesheet" th:href="@{css/contacts_style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="creators-box">
-    <div>Имя: <span th:text="${fullName}"></span></div>
-    <div>Номер телефона: <span th:text="${phoneNumber}"></span></div>
-    <div>Электронная почта: <span th:text="${email}"></span></div>
+    <div class="each-creator-box" th:each="creator : ${creators}">
+        <div><img class="each-creator-img" th:src="${creator.img}" alt="artem_img"></div>
+        <div>Имя: <span th:text="${creator.fullName}"></span></div>
+        <div>Номер телефона: <span th:text="${creator.phoneNumber}"></span></div>
+        <div>Электронная почта: <span th:text="${creator.email}"></span></div>
+    </div>
 </div>
 </body>
 </html>

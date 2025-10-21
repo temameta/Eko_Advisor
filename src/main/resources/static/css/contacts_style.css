@@ -1,0 +1,15 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.each-creator-box {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+}
+
+.each-creator-img {
+    width: 30%;
+    height: 40%;
+}

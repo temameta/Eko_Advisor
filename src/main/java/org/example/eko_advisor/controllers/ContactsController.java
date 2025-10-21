@@ -19,9 +19,8 @@ public class ContactsController {
         try (InputStream inputStream = getClass()
                 .getResourceAsStream("/data/contacts.json")) {
             contacts = mapper.readValue(inputStream, Contacts.class);
-            model.addAttribute("fullName", contacts.getCreatorByAbbr("artem").getFullName());
-            model.addAttribute("phoneNumber", contacts.getCreatorByAbbr("artem").getPhoneNumber());
-            model.addAttribute("email", contacts.getCreatorByAbbr("artem").getEmail());
+            model.addAttribute("creators", contacts.getCreators());
+
 
         } catch (Exception e) {
             e.printStackTrace();
