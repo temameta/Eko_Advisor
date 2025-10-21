@@ -5,8 +5,8 @@ import java.util.List;
 public class Contacts {
     List<Creator> creators;
 
-    public Contacts(Creator[] creators) {
-        this.creators = List.of(creators);
+    public Contacts(List<Creator> creators) {
+        this.creators = creators;
     }
 
     public Contacts() {

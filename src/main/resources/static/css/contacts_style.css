@@ -5,6 +5,9 @@ body {
 .creators-box {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
 }
 
 .each-creator-box {
@@ -18,4 +21,11 @@ body {
 .each-creator-img {
     width: 30%;
     height: 40%;
+}
+
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
 }

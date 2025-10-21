@@ -9,9 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="header">Контакты</div>
+
+<hr>
+
 <div class="creators-box">
     <div class="each-creator-box" th:each="creator : ${creators}">
-        <div><img class="each-creator-img" th:src="${creator.img}" alt="artem_img"></div>
+        <div><img class="each-creator-img" th:src="${creator.img}" alt="creator_img"></div>
         <div>Имя: <span th:text="${creator.fullName}"></span></div>
         <div>Номер телефона: <span th:text="${creator.phoneNumber}"></span></div>
         <div>Электронная почта: <span th:text="${creator.email}"></span></div>
