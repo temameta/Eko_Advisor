@@ -12,7 +12,8 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/")
 public class HomeController {
+    @GetMapping
     public String home() {
-        return "home.html";
+        return "home\\home.html";
     }
 }

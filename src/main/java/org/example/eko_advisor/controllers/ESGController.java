@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/esg")
 public class ESGController {
+    @GetMapping
     public String getEsg() {
         return "esg.html";
     }
