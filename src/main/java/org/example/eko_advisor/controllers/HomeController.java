@@ -14,6 +14,6 @@ import java.util.stream.Collectors;
 public class HomeController {
     @GetMapping
     public String home() {
-        return "home\\home.html";
+        return "home";
     }
 }
