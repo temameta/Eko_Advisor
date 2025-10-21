@@ -2,11 +2,17 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.creators-box {
+    display: flex;
+    flex-direction: row;
+}
+
 .each-creator-box {
     display: flex;
     justify-content: space-between;
     align-self: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .each-creator-img {
