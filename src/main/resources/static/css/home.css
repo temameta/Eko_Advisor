@@ -42,12 +42,18 @@ body {
     margin-right: 2%;
 }
 
-.img {
+.img-div {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     margin-top: 100px;
+}
+
+.home-img {
+    align-self: center;
+    height: 60%;
+    width: 60%;
 }
 
 @media (min-width: 1280px) {

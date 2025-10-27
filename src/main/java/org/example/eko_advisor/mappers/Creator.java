@@ -1,10 +1,8 @@
 package org.example.eko_advisor.mappers;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 
-public class CreatorsMapper {
+public class Creator {
     int id;
     String abbr;
     @JsonProperty("first_name")
@@ -17,7 +15,7 @@ public class CreatorsMapper {
     String email;
     String img;
 
-    public CreatorsMapper(int id, String abbr, String firstName, String lastName, String patronymic, String phoneNumber, String email, String img) {
+    public Creator(int id, String abbr, String firstName, String lastName, String patronymic, String phoneNumber, String email, String img) {
         this.id = id;
         this.abbr = abbr;
         this.firstName = firstName;
@@ -28,7 +26,7 @@ public class CreatorsMapper {
         this.img = img;
     }
 
-    public CreatorsMapper() {
+    public Creator() {
     }
 
     public int getId() {
@@ -93,5 +91,9 @@ public class CreatorsMapper {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String getFullName() {
+        return String.format("%s %s %s", this.lastName, this.firstName, this.patronymic);
     }
 }
