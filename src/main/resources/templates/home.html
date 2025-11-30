@@ -4,29 +4,20 @@
     <meta charset="UTF-8">
     <title>Эко-Советник</title>
     <link rel="stylesheet" th:href="@{css/home.css}">
+    <link rel="stylesheet" th:href="@{css/navigation.css}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+<div th:replace="~{navigation :: navbar}"></div>
 
-<div class="sections-div">
-    <div class="sections-inner-left">
-        <a class="sections-a" href="/home">ГЛАВНАЯ</a>
-        <a class="sections-a" href="/esg">ESG</a>
-        <a class="sections-a" href="/advice">СОВЕТЫ</a>
-    </div>
-    <div class = sections-inner-center>Экологический советник</div>
-    <div class="sections-inner-right">
-        <a class="sections-a" href="/resources">РЕСУРСЫ</a>
-        <a class="sections-a" href="/feedback">ОБРАТНАЯ СВЯЗЬ</a>
-        <a class="sections-a" href="/contacts">КОНТАКТЫ</a>
-    </div>
-</div>
-<hr>
 <div class="img-div">
     <h1>Меняем привычки, а не планету</h1>
     <img class="home-img" th:src="@{images/home_img.png}" alt="home_img"/>
+</div>
+<div class="main-text">
+    <p>Приветствуем на образовательной платформе, созданной для студентов и преподавателей! Здесь вы систематизируете свои знания в области экологии, социального развития и корпоративного управления.</p>
 </div>
 
 </body>
