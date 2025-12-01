@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Советы</title>
+    <link rel="stylesheet" th:href="@{/css/navigation.css}">
+    <link rel="stylesheet" th:href="@{/css/advice.css}">
+</head>
+<body>
+<div th:replace="~{navigation :: navbar}"></div>
+<main class="advice">
+
+    <!-- Радиокнопки должны быть ВНУТРИ main и ПЕРЕД контентом -->
+    <input type="radio" id="home-tab" name="advice-tab" checked class="radio-input">
+    <input type="radio" id="companies-tab" name="advice-tab" class="radio-input">
+
+    <!-- Переключатель -->
+    <div class="switch-container">
+        <div class="radio-switch">
+            <label for="home-tab" class="switch-label">Для дома</label>
+            <label for="companies-tab" class="switch-label">Для компаний</label>
+        </div>
+    </div>
+
+    <!-- Контент для дома -->
+    <div class="advice-content home-content">
+        <h1>Советы для дома</h1>
+        <p class="subtitle">Эти советы помогут вам сэкономить ресурсы и внести свой вклад в устойчивое развитие.</p>
+        <div th:each="a : ${advice.home}">
+            <h2 th:text="${a.header}"></h2>
+            <span th:text="${a.advise}"></span>
+        </div>
+    </div>
+
+    <!-- Контент для компаний -->
+    <div class="advice-content company-content">
+        <h1>Советы для компаний</h1>
+        <p class="subtitle">Эти советы помогут вашей компании снизить риски и привлечь новых инвесторов и лояльных клиентов.</p>
+        <div th:each="a : ${advice.company}">
+            <h2 th:text="${a.header}"></h2>
+            <span th:text="${a.advise}"></span>
+        </div>
+    </div>
+
+</main>
+</body>
+</html>
