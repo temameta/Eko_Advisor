@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Принципы ESG</title>
+    <link rel="stylesheet" th:href="@{/css/navigation.css}">
+    <link rel="stylesheet" th:href="@{/css/advice.css}">
+</head>
+<body>
+<div th:replace="~{navigation :: navbar}"></div>
+<main class="esg">
+    <h1>Основные принципы ESG</h1>
+    <p class="subtitle">Аббревиатуру ESG (environmental, social, governance) можно расшифровать как «природа, общество, управление». Это свод правил и подходов к ведению бизнеса, которые способствуют его устойчивому развитию.</p>
+    <div class="card" th:each="p : ${esg.principles}">
+        <h2 th:text="|${p.abbr} - ${p.name} - ${p.principle}|"></h2>
+        <p class="subtitle" th:if="${p.text}" th:text="${p.text}"></p>
+        <h3>Примеры</h3>
+        <div th:if="${p.examples}" th:each="e : ${p.examples}">
+            <span th:text="${e.text}"></span>
+            <img th:if="${e.pic}" th:src="@{${e.pic}}" alt="example_pic">
+        </div>
+    </div>
+</main>
+</body>
+</html>

@@ -9,126 +9,165 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-}
 
-/* Скрываем радиокнопки */
-.radio-input {
-    display: none;
-}
-
-/* Стили для переключателя */
-.switch-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 30px;
-}
-
-.radio-switch {
-    display: inline-flex;
-    background-color: var(--switch-background);
-    border-radius: 30px;
-    padding: 5px;
-    position: relative;
-}
-
-.switch-label {
-    padding: 10px 30px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 500;
-    color: var(--switch-text);
-    transition: all 0.3s ease;
-    text-align: center;
-    z-index: 1;
-    position: relative;
-}
-
-/* Скрываем весь контент по умолчанию */
-.advice-content {
-    display: none;
-    animation: fadeIn 0.5s ease;
-}
-
-/* Показываем контент для дома при выборе первой радиокнопки */
-#home-tab:checked ~ .home-content {
-    display: block;
-}
-
-/* Показываем контент для компаний при выборе второй радиокнопки */
-#companies-tab:checked ~ .company-content {
-    display: block;
-}
-
-/* Стили для активной кнопки переключателя */
-#home-tab:checked ~ .switch-container .switch-label[for="home-tab"],
-#companies-tab:checked ~ .switch-container .switch-label[for="companies-tab"] {
-    background-color: var(--switch-active);
-    color: var(--switch-text-active);
-}
-
-/* Стили для контента */
-.advice-content h1 {
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-
-.advice-content .subtitle {
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    line-height: 1.5;
-}
-
-.advice-content > div {
-    background: #f8f9fa;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border-left: 4px solid var(--switch-active);
-}
-
-.advice-content h2 {
-    color: #34495e;
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-}
-
-.advice-content span {
-    color: #555;
-    line-height: 1.6;
-    display: block;
-}
-
-/* Анимация появления */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+    /* Скрываем радиокнопки */
+    .radio-input {
+        display: none;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* Адаптивность */
-@media (max-width: 768px) {
+    /* Стили для переключателя */
     .switch-container {
-        justify-content: center;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 30px;
     }
 
     .radio-switch {
-        width: 100%;
-        max-width: 300px;
+        display: inline-flex;
+        background-color: var(--switch-background);
+        border-radius: 30px;
+        padding: 5px;
+        position: relative;
     }
 
     .switch-label {
-        flex: 1;
-        padding: 10px 15px;
-        font-size: 0.9rem;
+        padding: 10px 30px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--switch-text);
+        transition: all 0.3s ease;
+        text-align: center;
+        z-index: 1;
+        position: relative;
     }
 
-    .advice {
-        padding: 15px;
+    /* Скрываем весь контент по умолчанию */
+    .advice-content {
+        display: none;
+        animation: fadeIn 0.5s ease;
+    }
+
+    /* Показываем контент для дома при выборе первой радиокнопки */
+    #home-tab:checked ~ .home-content {
+        display: block;
+    }
+
+    /* Показываем контент для компаний при выборе второй радиокнопки */
+    #companies-tab:checked ~ .company-content {
+        display: block;
+    }
+
+    /* Стили для активной кнопки переключателя */
+    #home-tab:checked ~ .switch-container .switch-label[for="home-tab"],
+    #companies-tab:checked ~ .switch-container .switch-label[for="companies-tab"] {
+        background-color: var(--switch-active);
+        color: var(--switch-text-active);
+    }
+
+    /* Стили для контента */
+    .advice-content h1 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+
+    .advice-content .subtitle {
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .advice-content > div {
+        background: #f8f9fa;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border-left: 4px solid var(--switch-active);
+    }
+
+    .advice-content h2 {
+        color: #34495e;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .advice-content span {
+        color: #555;
+        line-height: 1.6;
+        display: block;
+    }
+
+    /* Анимация появления */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+        .switch-container {
+            justify-content: center;
+        }
+
+        .radio-switch {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .switch-label {
+            flex: 1;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+        }
+
+        .advice {
+            padding: 15px;
+        }
+    }
+}
+
+.esg {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+    /* Стили для контента */
+    h1 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .card {
+        background: #f8f9fa;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border-left: 4px solid var(--switch-active);
+    }
+
+    h2 {
+        color: #34495e;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    span {
+        color: #555;
+        line-height: 1.6;
+        display: block;
     }
 }
