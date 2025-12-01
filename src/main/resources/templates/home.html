@@ -9,31 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+<div th:replace="~{navigation :: navbar}"></div>
 
-<div class="sections-div">
-    <div class="sections-inner-left">
-        <a class="sections-a" href="/home">ГЛАВНАЯ</a>
-        <div class="drop-list">
-            <a class="sections-a" href="/esg">ESG</a>
-            <div class="drop-items-list">
-                <a class="sections-a" href="/esg/test">Тест</a>
-                <a class="sections-a" href="/esg/examples">Примеры</a>
-                <a class="sections-a" href="/esg/basic-principles">Основные принципы</a>
-            </div>
-        </div>
-        <a class="sections-a" href="/advice">СОВЕТЫ</a>
-    </div>
-    <div class = sections-inner-center>Экологический советник</div>
-    <div class="sections-inner-right">
-        <a class="sections-a" href="/resources">РЕСУРСЫ</a>
-        <a class="sections-a" href="/feedback">ОБРАТНАЯ СВЯЗЬ</a>
-        <a class="sections-a" href="/contacts">КОНТАКТЫ</a>
-    </div>
-</div>
-<hr>
 <div class="img-div">
     <h1>Меняем привычки, а не планету</h1>
     <img class="home-img" th:src="@{images/home_img.png}" alt="home_img"/>
+</div>
+<div class="main-text">
+    <p>Приветствуем на образовательной платформе, созданной для студентов и преподавателей! Здесь вы систематизируете свои знания в области экологии, социального развития и корпоративного управления.</p>
 </div>
 
 </body>

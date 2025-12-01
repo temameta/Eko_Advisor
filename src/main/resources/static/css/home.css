@@ -2,46 +2,6 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-.sections-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 45px;
-}
-
-.sections-a {
-    font-size: 15px;
-    text-decoration: none;
-    color: black;
-}
-
-.sections-inner-left {
-    display: flex;
-    flex: 1;
-    gap: 14px;
-    justify-content: flex-start;
-    margin-left: 2%;
-}
-
-.sections-inner-center {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    white-space: nowrap;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.sections-inner-right {
-    display: flex;
-    flex: 1;
-    gap: 14px;
-    justify-content: flex-end;
-    margin-right: 2%;
-}
-
 .img-div {
     display: flex;
     flex-direction: column;
@@ -55,6 +15,15 @@ body {
     height: 60%;
     width: 60%;
 }
+.main-text {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+}
 
 .drop-list {
     position: relative;
@@ -66,7 +35,4 @@ body {
 
 @media (min-width: 1280px) {
 
-
-
 }
-
