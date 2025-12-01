@@ -53,14 +53,14 @@ li {
 }
 */
 
-a {
+.section a {
     color: #2c5530;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-a:hover {
+.section a:hover {
     color: #4a7c59;
     text-decoration: underline;
 }
