@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Navigation</title>
-    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" th:href="@{/css/navigation.css}">
 </head>
 <body>
-
-
     <div th:fragment="navbar">
         <div class="sections-div">
         <div class="sections-inner-left">
@@ -24,6 +22,5 @@
         </div>
         <hr class="nav-divider">
     </div>
-
 </body>
 </html>
