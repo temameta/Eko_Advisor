@@ -56,6 +56,14 @@ body {
     width: 60%;
 }
 
+.drop-list {
+    position: relative;
+}
+
+.drop-items-list {
+    position: absolute;
+}
+
 @media (min-width: 1280px) {
 
 
