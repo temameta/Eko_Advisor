@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ESGController {
     @GetMapping
     public String getEsg() {
-        return "esg.html";
+        return "advice";
     }
 }
