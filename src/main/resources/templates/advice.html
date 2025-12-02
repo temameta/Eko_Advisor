@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Советы</title>
-    <link rel="stylesheet" th:href="@{/css/navigation.css}">
-    <link rel="stylesheet" th:href="@{/css/advice.css}">
-</head>
+<head th:replace="~{fragments/head}"></head>
 <body>
-<div th:replace="~{navigation :: navbar}"></div>
+<nav th:replace="~{fragments/navbar}"></nav>
 <main class="advice">
-
     <!-- Радиокнопки должны быть ВНУТРИ main и ПЕРЕД контентом -->
     <input type="radio" id="home-tab" name="advice-tab" checked class="radio-input">
     <input type="radio" id="companies-tab" name="advice-tab" class="radio-input">
-
     <!-- Переключатель -->
     <div class="switch-container">
         <div class="radio-switch">
@@ -21,7 +14,6 @@
             <label for="companies-tab" class="switch-label">Для компаний</label>
         </div>
     </div>
-
     <!-- Контент для дома -->
     <div class="advice-content home-content">
         <h1>Советы для дома</h1>
@@ -31,7 +23,6 @@
             <span th:text="${a.advise}"></span>
         </div>
     </div>
-
     <!-- Контент для компаний -->
     <div class="advice-content company-content">
         <h1>Советы для компаний</h1>
@@ -41,7 +32,7 @@
             <span th:text="${a.advise}"></span>
         </div>
     </div>
-
 </main>
+<nav th:replace="~{fragments/footer}"></nav>
 </body>
 </html>
