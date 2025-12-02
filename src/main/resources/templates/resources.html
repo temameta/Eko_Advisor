@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/navigation.css}">
+    <link rel="stylesheet" th:href="@{css/navigation.css}">
     <link rel="stylesheet" th:href="@{css/resources.css}">
     <title>Ресурсы</title>
 </head>
@@ -94,14 +94,81 @@
 
 <div class="section">
     <h2>Книги</h2>
-    <ul>
-        <li><span class="highlight">«Zero Waste»</span> Без Джонсон — практическое руководство</li>
-        <li><span class="highlight">«Как отказаться от пластика»</span> Уилл МакКаллум</li>
-        <li><span class="highlight">«Осознанное потребление»</span> Мария Силаева</li>
-        <li><span class="highlight">«Без ума от отходов»</span> Анастасия Приходько</li>
-        <li><span class="highlight">«Дом без отходов»</span> Наталья Белоусова</li>
-        <li><span class="highlight">«Осознанная экология»</span> Дары Шевченко</li>
-    </ul>
+    <div class="books-container">
+        <div class="book-card">
+            <div class="book-image-wrapper aspect-ratio">
+                <img th:src="@{/images/books/book_zero_waste.jpg}"
+                     alt="Обложка книги Zero Waste"
+                     class="book-cover">
+            </div>
+            <div class="book-info">
+                <h3 class="book-title">«Zero Waste»</h3>
+                <p class="book-author">Беа Джонсон</p>
+                <p class="book-description">Практическое руководство по жизни без отходов. Автор делится своим опытом и даёт конкретные советы по сокращению мусора в быту.</p>
+                <a href="https://www.litres.ru/book/yana-potrekiy/zero-waste-osoznannoe-potreblenie-bez-fanatizma-42733285/" target="_blank" class="book-details-btn">Подробнее о книге</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image-wrapper aspect-ratio">
+                <img th:src="@{/images/books/book_plastic.jpg}"
+                     alt="Обложка книги «Как отказаться от пластика»"
+                     class="book-cover">
+            </div>
+            <div class="book-info">
+                <h3 class="book-title">«Как отказаться от пластика»</h3>
+                <p class="book-author">Уилл МакКаллум</p>
+                <p class="book-description">Руководство по снижению потребления пластика в повседневной жизни с фокусом на защиту океанов от пластикового загрязнения.</p>
+                <a href="https://www.litres.ru/book/uill-makkallum/kak-otkazatsya-ot-plastika-rukovodstvo-po-spaseniu-mira-42562999/" target="_blank" class="book-details-btn">Подробнее о книге</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image-wrapper aspect-ratio">
+                <img th:src="@{/images/books/book_ESG_navigator.jpg}"
+                     alt="Обложка книги «Устойчивое инвестирование. Навигатор по миру ESG»"
+                     class="book-cover">
+            </div>
+            <div class="book-info">
+                <h3 class="book-title">«Устойчивое инвестирование. Навигатор по миру ESG»</h3>
+                <p class="book-author">Раше Андреас</p>
+                <p class="book-description">
+                    Устойчивое инвестирование перестало быть нишевым занятием для идеалистов
+                    и превратилось в одно из самых динамично развивающихся направлений в индустрии управления капиталом.
+                    Ведущие мировые эксперты из числа ученых и практиков объединили свои знания и опыт,
+                    чтобы объяснить, почему и как это произошло. Они убедительно доказывают,
+                    что учет факторов ESG в инвестиционных решениях становится мейнстримом,
+                    компании все активнее внедряют принципы устойчивого развития,
+                    а инвесторы интегрируют ESG-критерии в анализ и выбор инвестиций.
+                    Это усиливает трансформацию рынков и экономики в целом.
+                </p>
+                <a href="https://www.litres.ru/book/andreas-rashe/ustoychivoe-investirovanie-navigator-po-miru-esg-71269690/" target="_blank" class="book-details-btn">Подробнее о книге</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image-wrapper aspect-ratio">
+                <img th:src="@{/images/books/book_ESG_standards.jpg}"
+                     alt="Обложка книги «Право устойчивого развития и ESG-стандарты»"
+                     class="book-cover">
+            </div>
+            <div class="book-info">
+                <h3 class="book-title">«Право устойчивого развития и ESG-стандарты»</h3>
+                <p class="book-author">Коллектив авторов</p>
+                <p class="book-description">
+                    Учебник содержит комплексный научный и учебный материал,
+                    раскрывающий новое для юриспруденции явление – право устойчивого развития –
+                    через призму его межотраслевого характера.
+                    Книга включает аналитику по вопросам нормирования
+                    общественных отношений посредством ESG-стандартов.
+                    Это первый инновационный российский учебник, нацеленный на популяризацию данного
+                    научно-практического направления и формирование юридического взгляда на глобальный тренд,
+                    переопределяющий многие мировые процессы.
+                </p>
+                <a href="https://www.litres.ru/book/raznoe-4340152/pravo-ustoychivogo-razvitiya-i-esg-standarty-69850285/" target="_blank" class="book-details-btn">Подробнее о книге</a>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
