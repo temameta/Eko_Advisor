@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" th:href="@{css/navigation.css}">
-    <link rel="stylesheet" th:href="@{css/feedback.css}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обратная связь</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+<head th:replace="~{fragments/head}"></head>
 <body>
-<div th:replace="~{navigation :: navbar}"></div>
-<div class="container">
+<nav th:replace="~{fragments/navbar}"></nav>
+<main class="feedback">
     <h1>Обратная связь</h1>
     <div class="section">
         <form class="contact-form" action="#" method="POST">
@@ -28,11 +21,10 @@
                 <label for="message">Текст обращения</label>
                 <textarea id="message" name="message" required placeholder="Опишите ваше обращение..." rows="5"></textarea>
             </div>
-
             <button type="submit" class="submit-btn">Отправить</button>
         </form>
     </div>
-
-</div>
+</main>
+<nav th:replace="~{fragments/footer}"></nav>
 </body>
 </html>
