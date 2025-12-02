@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Эко-Советник</title>
-    <link rel="stylesheet" th:href="@{/css/navigation.css}">
-    <link rel="stylesheet" th:href="@{/css/home.css}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-</head>
+<head th:replace="~{fragments/head}"></head>
 <body>
-<div th:replace="~{navigation :: navbar}"></div>
-
+<nav th:replace="~{fragments/navbar}"></nav>
+<main class="home">
 <div class="img-div">
     <h1>Меняем привычки, а не планету</h1>
     <img class="home-img" th:src="@{images/home_img.png}" alt="home_img"/>
@@ -19,6 +11,7 @@
 <div class="main-text">
     <p>Приветствуем на образовательной платформе, созданной для студентов и преподавателей! Здесь вы систематизируете свои знания в области экологии, социального развития и корпоративного управления.</p>
 </div>
-
+</main>
+<nav th:replace="~{fragments/footer}"></nav>
 </body>
 </html>

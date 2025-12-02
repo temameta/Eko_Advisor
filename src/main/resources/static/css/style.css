@@ -410,6 +410,32 @@ body {
     }
 }
 
+.home {
+    .img-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+
+        .home-img {
+            align-self: center;
+            height: 60%;
+            width: 60%;
+        }
+    }
+
+    .main-text {
+        font-size: 1.3rem;
+        line-height: 1.7;
+        color: #444;
+        margin: 2rem auto;
+        text-align: center;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         .sections-div {
