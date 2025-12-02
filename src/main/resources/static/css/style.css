@@ -18,8 +18,11 @@ body {
 }
 
 .navbar {
+    position: sticky; top: 0;
     width: 100%;
-    padding: 10px 0;
+    padding-top: 10px;
+    background-color: white;
+    z-index: 999;
 
     .sections-div {
         display: flex;
@@ -61,7 +64,11 @@ body {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            color: #1b5e20;
+
+            a {
+                text-decoration: none;
+                color: #1b5e20;
+            }
         }
 
         .sections-inner-right {
@@ -103,7 +110,7 @@ body {
     .sections {
         display: flex;
         flex-direction: row;
-        gap: 40px;
+        gap: 70px;
         padding: 20px;
 
         .section {
@@ -257,6 +264,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-top: 30px;
         }
 
         span {
