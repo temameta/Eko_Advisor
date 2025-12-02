@@ -1,174 +1,177 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{css/navigation.css}">
-    <link rel="stylesheet" th:href="@{css/resources.css}">
-    <title>Ресурсы</title>
-</head>
+<head th:replace="~{fragments/head}"></head>
 <body>
-<div th:replace="~{navigation :: navbar}"></div>
-<h1>Ресурсы</h1>
-
-<div class="section">
-    <h2>Полезные сайты</h2>
-    <ul>
-        <li><a href="https://recyclemap.ru/viewer?center=37.862340,55.653840,9.00" target="_blank">RecycleMap</a> — карта пунктов приема вторичного сырья</li>
-        <li><a href="https://ecowiki.ru/" target="_blank">Ecowiki</a> — энциклопедия экологичной жизни</li>
-        <li><a href="https://act-cee.greenpeace.org/ru/about" target="_blank">Greenpeace</a> — акции и исследования</li>
-        <li><a href="https://takiedela.ru/" target="_blank">Такие дела</a> — статьи об экологии и обществе</li>
-    </ul>
-</div>
-
-
-
-<div class="section">
-    <h2>Экологические калькуляторы</h2>
-    <ul>
-        <li><a href="https://carbonfootprintcalculator.sibur.ru/start" target="_blank">Углеродный след</a> — расчет вашего воздействия на климат</li>
-        <li><a href="https://watercalculator.org/" target="_blank">Водный след</a> — анализ расхода воды</li>
-    </ul>
-</div>
-
-
-
-<div class="section">
-    <h2>Видео</h2>
-    <ul>
-        <li class="center-text"><span class="highlight">Дефицит пресной воды: опасное будущее привычного потребления</span>
-            <p>Из-за чего вода в реках и озёрах становится непригодной для питья?
-                Почему нехватка этого важного ресурса в других странах небезопасна для России?
-                Какие технологии могут решить проблему дефицита воды?
-                Смотрите фильм, чтобы узнать, почему, несмотря на обилие водоемов на планете, число людей, страдающих от жажды и антисанитарии, растет.
-                В этом выпуске расскажут, какими запасами пресной воды располагает Россия и могут ли они иссякнуть. А ещё — что такое водный след и как его рассчитать. Экономите ли вы воду?
-            </p>
-            <iframe
-                    width="700"
-                    height="400"
-                    src="https://www.youtube.com/embed/WXuZjz8Vu3E?si=Dr5zXB5BpsqFqdpd"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen>
-
-            </iframe>
-        </li>
-        <li class="center-text"><span class="highlight">Планета мусора</span>
-            <p>Мусорная проблема — вызов для человечества.
-                Более двух миллиардов тонн мусора оставляет за собой человечество каждый год и к 2050 году,
-                мусора в мировом океане будет даже больше, чем рыбы!
-                Вы можете стать частью решения этой проблемы, и мы покажем,
-                как это сделать! Самое интересное, что именно наша страна обладает технологиями,
-                которые могли бы помочь человечеству справиться с этим вызовом современности.
-                Подключайтесь - и примите участие в защите нашей планеты!</p>
-            <iframe
-                    width="700"
-                    height="400"
-                    src="https://www.youtube.com/embed/vv2koeh_iAg?si=ZT3GV_cmAwF0-lak"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen>
-
-            </iframe>
-        </li>
-        <li class="center-text"><span class="highlight">Комплекс по переработке отходов «Дон»</span>
-            <p>За время своего существования человечество в совершенстве овладело только одним производством:
-                производством мусора. Сегодня мы расскажем о людях, которые дают нам возможность легче дышать,
-                а нашим детям — жить в чистом мире. Уникальный комплекс по переработке отходов «Дон» поможет нам разобраться,
-                как именно человечество борется со своими же отпечатками.</p>
-            <iframe
-                    width="700"
-                    height="400"
-                    src="https://www.youtube.com/embed/6cr-E4MUON0?si=81p69zAy5AR1TU9l"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
-        </li>
-    </ul>
-</div>
-
-
-
-<div class="section">
-    <h2>Книги</h2>
-    <div class="books-container">
-        <div class="book-card">
-            <div class="book-image-wrapper aspect-ratio">
-                <img th:src="@{/images/books/book_zero_waste.jpg}"
-                     alt="Обложка книги Zero Waste"
-                     class="book-cover">
-            </div>
-            <div class="book-info">
-                <h3 class="book-title">«Zero Waste»</h3>
-                <p class="book-author">Беа Джонсон</p>
-                <p class="book-description">Практическое руководство по жизни без отходов. Автор делится своим опытом и даёт конкретные советы по сокращению мусора в быту.</p>
-                <a href="https://www.litres.ru/book/yana-potrekiy/zero-waste-osoznannoe-potreblenie-bez-fanatizma-42733285/" target="_blank" class="book-details-btn">Подробнее о книге</a>
-            </div>
-        </div>
-
-        <div class="book-card">
-            <div class="book-image-wrapper aspect-ratio">
-                <img th:src="@{/images/books/book_plastic.jpg}"
-                     alt="Обложка книги «Как отказаться от пластика»"
-                     class="book-cover">
-            </div>
-            <div class="book-info">
-                <h3 class="book-title">«Как отказаться от пластика»</h3>
-                <p class="book-author">Уилл МакКаллум</p>
-                <p class="book-description">Руководство по снижению потребления пластика в повседневной жизни с фокусом на защиту океанов от пластикового загрязнения.</p>
-                <a href="https://www.litres.ru/book/uill-makkallum/kak-otkazatsya-ot-plastika-rukovodstvo-po-spaseniu-mira-42562999/" target="_blank" class="book-details-btn">Подробнее о книге</a>
-            </div>
-        </div>
-
-        <div class="book-card">
-            <div class="book-image-wrapper aspect-ratio">
-                <img th:src="@{/images/books/book_ESG_navigator.jpg}"
-                     alt="Обложка книги «Устойчивое инвестирование. Навигатор по миру ESG»"
-                     class="book-cover">
-            </div>
-            <div class="book-info">
-                <h3 class="book-title">«Устойчивое инвестирование. Навигатор по миру ESG»</h3>
-                <p class="book-author">Раше Андреас</p>
-                <p class="book-description">
-                    Устойчивое инвестирование перестало быть нишевым занятием для идеалистов
-                    и превратилось в одно из самых динамично развивающихся направлений в индустрии управления капиталом.
-                    Ведущие мировые эксперты из числа ученых и практиков объединили свои знания и опыт,
-                    чтобы объяснить, почему и как это произошло. Они убедительно доказывают,
-                    что учет факторов ESG в инвестиционных решениях становится мейнстримом,
-                    компании все активнее внедряют принципы устойчивого развития,
-                    а инвесторы интегрируют ESG-критерии в анализ и выбор инвестиций.
-                    Это усиливает трансформацию рынков и экономики в целом.
+<nav th:replace="~{fragments/navbar}"></nav>
+<main class="resources">
+    <h1>Ресурсы</h1>
+    <div class="section">
+        <h2>Полезные сайты</h2>
+        <ul>
+            <li><a href="https://recyclemap.ru/viewer?center=37.862340,55.653840,9.00" target="_blank">RecycleMap</a> —
+                карта пунктов приема вторичного сырья
+            </li>
+            <li><a href="https://ecowiki.ru/" target="_blank">Ecowiki</a> — энциклопедия экологичной жизни</li>
+            <li><a href="https://act-cee.greenpeace.org/ru/about" target="_blank">Greenpeace</a> — акции и исследования
+            </li>
+            <li><a href="https://takiedela.ru/" target="_blank">Такие дела</a> — статьи об экологии и обществе</li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Экологические калькуляторы</h2>
+        <ul>
+            <li><a href="https://carbonfootprintcalculator.sibur.ru/start" target="_blank">Углеродный след</a> — расчет
+                вашего воздействия на климат
+            </li>
+            <li><a href="https://watercalculator.org/" target="_blank">Водный след</a> — анализ расхода воды</li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Видео</h2>
+        <ul>
+            <li class="center-text"><span
+                    class="highlight">Дефицит пресной воды: опасное будущее привычного потребления</span>
+                <p>Из-за чего вода в реках и озёрах становится непригодной для питья?
+                    Почему нехватка этого важного ресурса в других странах небезопасна для России?
+                    Какие технологии могут решить проблему дефицита воды?
+                    Смотрите фильм, чтобы узнать, почему, несмотря на обилие водоемов на планете, число людей,
+                    страдающих от жажды и антисанитарии, растет.
+                    В этом выпуске расскажут, какими запасами пресной воды располагает Россия и могут ли они иссякнуть.
+                    А ещё — что такое водный след и как его рассчитать. Экономите ли вы воду?
                 </p>
-                <a href="https://www.litres.ru/book/andreas-rashe/ustoychivoe-investirovanie-navigator-po-miru-esg-71269690/" target="_blank" class="book-details-btn">Подробнее о книге</a>
-            </div>
-        </div>
+                <iframe
+                        width="700"
+                        height="400"
+                        src="https://www.youtube.com/embed/WXuZjz8Vu3E?si=Dr5zXB5BpsqFqdpd"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
 
-        <div class="book-card">
-            <div class="book-image-wrapper aspect-ratio">
-                <img th:src="@{/images/books/book_ESG_standards.jpg}"
-                     alt="Обложка книги «Право устойчивого развития и ESG-стандарты»"
-                     class="book-cover">
+                </iframe>
+            </li>
+            <li class="center-text"><span class="highlight">Планета мусора</span>
+                <p>Мусорная проблема — вызов для человечества.
+                    Более двух миллиардов тонн мусора оставляет за собой человечество каждый год и к 2050 году,
+                    мусора в мировом океане будет даже больше, чем рыбы!
+                    Вы можете стать частью решения этой проблемы, и мы покажем,
+                    как это сделать! Самое интересное, что именно наша страна обладает технологиями,
+                    которые могли бы помочь человечеству справиться с этим вызовом современности.
+                    Подключайтесь - и примите участие в защите нашей планеты!</p>
+                <iframe
+                        width="700"
+                        height="400"
+                        src="https://www.youtube.com/embed/vv2koeh_iAg?si=ZT3GV_cmAwF0-lak"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+
+                </iframe>
+            </li>
+            <li class="center-text"><span class="highlight">Комплекс по переработке отходов «Дон»</span>
+                <p>За время своего существования человечество в совершенстве овладело только одним производством:
+                    производством мусора. Сегодня мы расскажем о людях, которые дают нам возможность легче дышать,
+                    а нашим детям — жить в чистом мире. Уникальный комплекс по переработке отходов «Дон» поможет нам
+                    разобраться,
+                    как именно человечество борется со своими же отпечатками.</p>
+                <iframe
+                        width="700"
+                        height="400"
+                        src="https://www.youtube.com/embed/6cr-E4MUON0?si=81p69zAy5AR1TU9l"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+            </li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Книги</h2>
+        <div class="books-container">
+            <div class="book-card">
+                <div class="book-image-wrapper aspect-ratio">
+                    <img th:src="@{/images/books/book_zero_waste.jpg}"
+                         alt="Обложка книги Zero Waste"
+                         class="book-cover">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">«Zero Waste»</h3>
+                    <p class="book-author">Беа Джонсон</p>
+                    <p class="book-description">Практическое руководство по жизни без отходов. Автор делится своим
+                        опытом и даёт конкретные советы по сокращению мусора в быту.</p>
+                    <a href="https://www.litres.ru/book/yana-potrekiy/zero-waste-osoznannoe-potreblenie-bez-fanatizma-42733285/"
+                       target="_blank" class="book-details-btn">Подробнее о книге</a>
+                </div>
             </div>
-            <div class="book-info">
-                <h3 class="book-title">«Право устойчивого развития и ESG-стандарты»</h3>
-                <p class="book-author">Коллектив авторов</p>
-                <p class="book-description">
-                    Учебник содержит комплексный научный и учебный материал,
-                    раскрывающий новое для юриспруденции явление – право устойчивого развития –
-                    через призму его межотраслевого характера.
-                    Книга включает аналитику по вопросам нормирования
-                    общественных отношений посредством ESG-стандартов.
-                    Это первый инновационный российский учебник, нацеленный на популяризацию данного
-                    научно-практического направления и формирование юридического взгляда на глобальный тренд,
-                    переопределяющий многие мировые процессы.
-                </p>
-                <a href="https://www.litres.ru/book/raznoe-4340152/pravo-ustoychivogo-razvitiya-i-esg-standarty-69850285/" target="_blank" class="book-details-btn">Подробнее о книге</a>
+
+            <div class="book-card">
+                <div class="book-image-wrapper aspect-ratio">
+                    <img th:src="@{/images/books/book_plastic.jpg}"
+                         alt="Обложка книги «Как отказаться от пластика»"
+                         class="book-cover">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">«Как отказаться от пластика»</h3>
+                    <p class="book-author">Уилл МакКаллум</p>
+                    <p class="book-description">Руководство по снижению потребления пластика в повседневной жизни с
+                        фокусом на защиту океанов от пластикового загрязнения.</p>
+                    <a href="https://www.litres.ru/book/uill-makkallum/kak-otkazatsya-ot-plastika-rukovodstvo-po-spaseniu-mira-42562999/"
+                       target="_blank" class="book-details-btn">Подробнее о книге</a>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-image-wrapper aspect-ratio">
+                    <img th:src="@{/images/books/book_ESG_navigator.jpg}"
+                         alt="Обложка книги «Устойчивое инвестирование. Навигатор по миру ESG»"
+                         class="book-cover">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">«Устойчивое инвестирование. Навигатор по миру ESG»</h3>
+                    <p class="book-author">Раше Андреас</p>
+                    <p class="book-description">
+                        Устойчивое инвестирование перестало быть нишевым занятием для идеалистов
+                        и превратилось в одно из самых динамично развивающихся направлений в индустрии управления
+                        капиталом.
+                        Ведущие мировые эксперты из числа ученых и практиков объединили свои знания и опыт,
+                        чтобы объяснить, почему и как это произошло. Они убедительно доказывают,
+                        что учет факторов ESG в инвестиционных решениях становится мейнстримом,
+                        компании все активнее внедряют принципы устойчивого развития,
+                        а инвесторы интегрируют ESG-критерии в анализ и выбор инвестиций.
+                        Это усиливает трансформацию рынков и экономики в целом.
+                    </p>
+                    <a href="https://www.litres.ru/book/andreas-rashe/ustoychivoe-investirovanie-navigator-po-miru-esg-71269690/"
+                       target="_blank" class="book-details-btn">Подробнее о книге</a>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-image-wrapper aspect-ratio">
+                    <img th:src="@{/images/books/book_ESG_standards.jpg}"
+                         alt="Обложка книги «Право устойчивого развития и ESG-стандарты»"
+                         class="book-cover">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">«Право устойчивого развития и ESG-стандарты»</h3>
+                    <p class="book-author">Коллектив авторов</p>
+                    <p class="book-description">
+                        Учебник содержит комплексный научный и учебный материал,
+                        раскрывающий новое для юриспруденции явление – право устойчивого развития –
+                        через призму его межотраслевого характера.
+                        Книга включает аналитику по вопросам нормирования
+                        общественных отношений посредством ESG-стандартов.
+                        Это первый инновационный российский учебник, нацеленный на популяризацию данного
+                        научно-практического направления и формирование юридического взгляда на глобальный тренд,
+                        переопределяющий многие мировые процессы.
+                    </p>
+                    <a href="https://www.litres.ru/book/raznoe-4340152/pravo-ustoychivogo-razvitiya-i-esg-standarty-69850285/"
+                       target="_blank" class="book-details-btn">Подробнее о книге</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</main>
+<nav th:replace="~{fragments/footer}"></nav>
 </body>
 </html>
