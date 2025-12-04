@@ -1,4 +1,4 @@
-package org.example.eko_advisor.controllers;
+package org.example.eko_advisor.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
